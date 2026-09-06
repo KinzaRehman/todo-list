@@ -1,0 +1,276 @@
+/*things for the WHole app*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --matcha: #929a52;
+  --dark-matcha: #687238;
+  --strawberry: #e97883;
+  --dark-strawberry: #c85562;
+  --strawberry-milk: #f7ced2;
+  --cream: #fff5dc;
+  --white: #ffffff;
+  --dark-text: #463d37;
+}
+/* main body sutff*/
+body {
+  min-height: 110vh;
+  padding: 2rem 1rem;
+  background-image:
+    linear-gradient(
+      rgba(247, 206, 210, 0.55),
+      rgba(255, 245, 220, 0.55),
+      rgba(203, 210, 140, 0.55)
+    ),
+    url("https://media.giphy.com/media/ruNjmC4ClpcrwIg3mg/giphy.gif");
+  background-size: cover;
+  background-position: center;
+  color: var(--dark-text);
+  font-family: "Nunito", sans-serif;
+}
+
+body, header, #todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header, #countingTasks, #todo-container {
+  width: 100%;
+  max-width: 37.5rem;
+}
+
+h1 {
+  margin-bottom: 1.25rem;
+  font-family: "Coiny", sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--dark-matcha);
+
+}
+
+h2 {
+  color: var(--dark-matcha);
+  text-align: center;
+    margin: 1.5rem 0 1rem;
+}
+
+
+/* Task counters */
+
+#countingTasks {
+  margin-bottom: 1rem;
+}
+
+#numberOfTasks {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--white);
+  border-radius: 0.75rem;
+}
+
+#numberOfTasks p {
+  font-weight: bold;
+}
+
+#completed-counter {
+  color: var(--dark-matcha);
+}
+
+#uncompleted-counter {
+  color: var(--dark-strawberry);
+}
+
+/* To-do box */
+
+#todo-container {
+  padding: 1.5rem;
+  background: var(--white);
+  border: 0.2rem solid var(--strawberry-milk);
+  border-radius: 1.25rem;
+  box-shadow: 0 0.3rem 1rem rgba(70, 61, 55, 0.2);
+}
+
+#todo-form {
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+input, button {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font: inherit;
+}
+
+#input-box {
+  min-width: 0;
+  flex: 1;
+  background: var(--cream);
+  border: 0.15rem solid var(--matcha);
+}
+/* the buttons */
+
+
+button {
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#input-button, li button:first-of-type {
+  background: var(--matcha);
+  color: var(--white);
+}
+
+#reset, li button:last-of-type {
+  background: var(--strawberry);
+  color: var(--white);
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#error-message {
+  width: 100%;
+  min-height: 1.5rem;
+  margin-top: 0.5rem;
+  color: var(--dark-strawberry);
+  font-weight: bold;
+}
+
+/* Task list */
+
+ul {
+  width: 100%;
+  list-style: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  margin-bottom: 0.75rem;
+  padding: 0.75rem;
+  background: var(--cream);
+  border-left: 0.2rem solid var(--matcha);
+  border-radius: 0.5rem;
+}
+
+li span {
+  flex: 1;
+  flex-wrap: wrap;
+
+}
+
+li input[type="checkbox"] {
+  width: 1.25rem;
+  height: 1.25rem;
+  accent-color: var(--dark-matcha);
+  border-radius: 10%;
+}
+
+.completed {
+  color: gray;
+  text-decoration: line-through;
+}
+
+li span[contenteditable="true"] {
+  background: var(--white);
+}
+
+/* Phone screens */
+
+@media screen and (max-width: 35rem) {
+  body {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  #numberOfTasks, #todo-form {
+    flex-direction: column;
+  }
+
+  #todo-container {
+    padding: 1rem;
+  }
+
+  #input-box, #todo-form button {
+    width: 100%;
+  }
+
+  li {
+    flex-wrap: wrap;
+    border-radius: 0.5rem;
+  }
+
+  li span {
+    flex-basis: calc(100% - 2.5rem);
+    border-radius: 0.5rem;
+
+  }
+
+  li button {
+    flex: 1;
+  }
+}
+
+/* Accessibility: replace the moving GIF with a still background from one of the volunteers in community */
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    background-image: linear-gradient(
+      var(--strawberry-milk),
+      var(--cream),
+      var(--matcha)
+    );
+  }
+}
+
+/* Hide the normal cursor on devices that use a mouse | not my code it is a combination of tiktok youtube google  */
+@media (pointer: fine) {
+    body,
+    button,
+    input,
+    li {
+        cursor: none;
+    }
+
+    .custom-cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 48px;
+        height: 48px;
+        z-index: 9999;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        display: none;
+    }
+
+    .custom-cursor img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
+    .custom-cursor.is-visible {
+        display: block;
+    }
+
+    .custom-cursor.is-clicking {
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+}

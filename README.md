@@ -9,14 +9,7 @@
 - Checkout answer branch
 - Push to your fork
 - Issue a pull request
-- Your pull request description should contain the following:
-  - (1 to 5 no 3) I completed the challenge
-  - (1 to 5 no 3) I feel good about my code
-  - Anything specific on which you want feedback!
-
-Example:
-```
-I completed the challenge: 5
-I feel good about my code: 4
-I'm not sure if my constructors are setup cleanly...
-```
+-Notes:
+  - I completed the challenge: 5 
+  - I feel good about my code: 4
+  - Anything specific on which you want feedback: I wanted the mouse to be a strawberry cursor on like anything with mouses, like laptops/ computers. but on phone just scroll. SO i had to get the code for that online and just replace things like my link, html css and JS. The list is fucntional and I learned how to cater to people with accessibility based on grants feedback and I want to know how to better incorporate features catered to them. 

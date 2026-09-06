@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="My To-Do List App">
+    <meta name="keywords" content="todo, list, tasks">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Coiny&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lilita+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Titan+One&display=swap" rel="stylesheet">
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+	
+    <header> 
+        <h1 class="coiny-regular">A running to do list </h1>
+    </header>
+	<!--The person probably has to see whats done and whats left -->
+
+    <section id="countingTasks">
+        <section id="numberOfTasks">
+            <p>Completed: <span id="completed-counter"></span></p>
+            <p>Uncompleted: <span id="uncompleted-counter"></span></p>
+        </section>
+    </section>
+
+   <!--they need to add stuf to the list-->
+    <section id="todo-container">
+        <form id="todo-form">
+   			<input type="text" id="input-box" placeholder="Add a new task" autocomplete="off">
+
+    		<button type="submit" id="input-button">Add Item</button>
+    		<button type="button" id="reset">Reset List</button>
+		</form>
+		<p id="error-message" role="alert"></p>
+
+        <h2>Task List</h2>
+        <ul id="list-container"></ul>
+    </section>
+
+
+    <!-- custome cursor yt, tt-->
+    <div class="custom-cursor" aria-hidden="true">
+    <img src="img/Fruit Strawberry Sticker by Elsa Isabella.gif" alt="">
+    </div>
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+
