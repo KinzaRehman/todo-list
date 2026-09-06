@@ -123,7 +123,6 @@ function addTask() {
     updatecounters();
 }
 
-
 //if its checked then + 1 if not checked then also plus one then calcuate the compelte is taking the sum of all checked, and uncomplete is total - checked
 
 function updateCounters() {
@@ -141,8 +140,6 @@ function updateCounters() {
     }
 }
 updateCounters();
-
-
 
 //this is not my code i just wanted a pretty cursor 
 document.addEventListener("mousemove", function (event) {

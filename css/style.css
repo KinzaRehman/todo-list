@@ -3,6 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
 }
 
 :root {
@@ -14,6 +15,7 @@
   --cream: #fff5dc;
   --white: #ffffff;
   --dark-text: #463d37;
+  --pink: #cc757f;
 }
 /* main body sutff*/
 body {
